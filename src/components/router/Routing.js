@@ -1,15 +1,16 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import React from "react";
+import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import Login from "../Login";
+import Register from "../Register";
 
 function Routing() {
     return (
-        <Routes>
-            <Route exact path="/" component={Login}/>
-            <Route path="/about" component={Login}/>
-            {/*<Route path="/service" component={Service}/>*/}
-        </Routes>
-
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Login></Login>}/>
+                <Route exact path="/register" element={<Register></Register>}/>
+            </Routes>
+        </Router>
     );
 }
 
